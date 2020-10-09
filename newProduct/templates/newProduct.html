@@ -34,6 +34,8 @@
     .new_slo_box {
         margin: 50px;
     }
+
+    .pagination{color: black;}
 </style>
 {%endblock%}
 
@@ -47,7 +49,7 @@
         {{posts.number}} of {{posts.paginator.num_pages}}
         </h4><br><br>
         <div class="posts">
-        {%for new in news%}
+        {%for new in posts%}
         
         <div class="new" onclick="location.href='/newProduct/{{new.id}}'">
             <div class="new-d">
@@ -59,7 +61,8 @@
     </div>
         {%if posts.has_previous%}
         <a href="?page={{posts.previous_page_number}}">Previous</a>
-        {%elif posts.has_next%}
+        {%endif%}
+        {%if posts.has_next%}
         <a href="?page={{posts.next_page_number}}">Next</a>
         {%endif%}
     </div>
