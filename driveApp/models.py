@@ -9,4 +9,8 @@ class DriveThru(models.Model):
     #items = models.ForeignKey(Cart, on_delete=models.CASCADE, null=True) # 상품목록 (장바구니에서 받아오기, 직접 여기서 입력 x)
     state = models.IntegerField(default=0) # 픽업 준비 상황 (신청완료 = 0 (디폴트) / 상품준비중 = 1 / 준비완료, 픽업대기 = 2 / 픽업완료 = 3)
     pick_date = models.TimeField() # 픽업날짜 (사용자가 선택)
+<<<<<<< HEAD
     pub_date = models.DateTimeField(auto_now=True) # 작성시간 (자동기입)
+=======
+    pub_date = models.DateTimeField(auto_now=True) # 작성시간 (자동기입)
+>>>>>>> 29c21c765ff47b82606f67c76754b1c33c88302f
