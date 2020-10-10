@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('driveThru/', views.driveThru, name='driveThru'),
     path('loginWarning/', views.loginWarning, name='loginWarning'),
+    path('create/', views.create, name='create'),
     path('delete/<int:pk>', views.delete, name="delete"),
     path('new/', views.new, name='new'),
 ]
